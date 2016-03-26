@@ -14,7 +14,8 @@ public ArrayList<int[]> Solution(int[] numArray, int target){
 	Arrays.sort(numArray);
 	ArrayList<int[]> result = new ArrayList<>();
 	for(int i=0; i<numArray.length; i++){
-		
+		//TODO: do binary search
+		System.out.println("test");
 	}
 	return result;
 }
