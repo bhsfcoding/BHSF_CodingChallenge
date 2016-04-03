@@ -1,4 +1,5 @@
 /*
+@author: Mingxuan Zha
 Question:
 Given an unsorted array of integers "numArray" and an integer "target", return all pairs of numbers in the array if their sum equals to "target" in an arrraylist, with the smaller number coming first in each pair.
 Inputs:
@@ -22,10 +23,10 @@ public ArrayList<int[]> Solution(int[] numArray, int target){
 	//check for pairs and add to the result
 	for(int j=0; j<numArray.length; j++){
 		if(set.contains(numArray[j])){
-			int[] current = new int[2];
-			current[0] = Math.min(numArray[j],target-numArray[j]);
-			current[1] = Math.max(numArray[j],target-numArray[j]);
-			result.add(current);
+			int[] pair = new int[2];
+			pair[0] = Math.min(numArray[j],target-numArray[j]);
+			pair[1] = Math.max(numArray[j],target-numArray[j]);
+			result.add(pair);
 		}
 	}
 	return result;
